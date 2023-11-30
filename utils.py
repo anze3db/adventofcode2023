@@ -48,6 +48,9 @@ class AoC:
 @cache
 def submit(year: int, day: int, level: int, answer: Any):
     console.log(f"Posting [bold]{answer}[/bold] for {day=} {level=}")
+    if not answer:
+        console.log("Skipping submission", answer)
+        return
     result = requests.post(
         f"{AOC_URL}/{year}/day/{day}/answer",
         dict(level=level, answer=answer),
