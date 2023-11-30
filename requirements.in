@@ -1,0 +1,9 @@
+requests
+percache
+beautifulsoup4
+python-dotenv
+
+types-requests
+mypy
+rich
+ruff
