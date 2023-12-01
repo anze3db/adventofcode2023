@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 from typing import Any
 
@@ -20,10 +21,13 @@ assert AOC_SESSION, "Set AOC_SESSION env variable to your session cookie on adve
 
 
 class AoC:
-    def __init__(self, day: int, year: int = datetime.now().year):
+    def __init__(self, day: int | None = None, year: int = datetime.now().year):
+        if day is None:
+            day = int(sys.argv[0].split(".")[0])
         console.log(f"Solving {day=} {year=}")
         self.day = day
         self.year = year
+        get_puzzle(self.day, self.year, part=1)
 
     def print_p1(self):
         console.log(get_puzzle(self.day, self.year, part=1))
@@ -73,6 +77,10 @@ def get_puzzle(day: int, year: int, part: int):
     assert result.status_code == 200, result.text
 
     soup = BeautifulSoup(result.text, features="html.parser")
+
+    index = part - 1
+    if len(soup.body.main.findAll("article")) < index:
+        return f"Part {part} Not yet available"
 
     return soup.body.main.findAll("article")[part - 1].get_text()
 
