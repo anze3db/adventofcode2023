@@ -23,7 +23,7 @@ assert AOC_SESSION, "Set AOC_SESSION env variable to your session cookie on adve
 class AoC:
     def __init__(self, day: int | None = None, year: int = datetime.now().year):
         if day is None:
-            day = int(sys.argv[0].split(".")[0])
+            day = int(sys.argv[0].split("/")[-1].split(".")[0])
         console.log(f"Solving {day=} {year=}")
         self.day = day
         self.year = year
