@@ -21,13 +21,11 @@ def part1(inp):
 def part2(inp):
     time = int(inp[0].split(": ")[1].replace(" ", ""))
     distance = int(inp[1].split(": ")[1].replace(" ", ""))
-    num = 1
 
-    options = 0
+    num = 0
     for i in range(1, time):
         if (time - i) * i > distance:
-            options += 1
-    num *= options
+            num += 1
     return num
 
 
