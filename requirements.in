@@ -1,9 +1,5 @@
-requests
-percache
-beautifulsoup4
-python-dotenv
+adventofcode
 
-types-requests
 mypy
 rich
 ruff

@@ -2,7 +2,7 @@ import math
 import queue
 from textwrap import dedent
 
-from utils import AoC
+from adventofcode import AoC
 
 aoc = AoC()
 
