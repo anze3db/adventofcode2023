@@ -10,12 +10,12 @@ def hsh(s):
     return current_value
 
 
-def part1(inp):
+def part1(inp: str):
     p = sum([hsh(s) for s in inp.strip().split(",")])
     return p
 
 
-def part2(inp):
+def part2(inp: str):
     steps = inp.strip().split(",")
     hashmap = {i: [] for i in range(256)}
     for step in steps:
@@ -38,9 +38,9 @@ def part2(inp):
     return res
 
 
-aoc = AoC(part_1=part1, part_2=part2, auto_splitlines=False)
-aoc.test_p1("""rn=1,cm-,qp=3,cm=2,qp-,pc=4,ot=9,ab=5,pc-,pc=6,ot=7\n""", 1320)
+aoc = AoC(part_1_no_splitlines=part1, part_2_no_splitlines=part2)
+aoc.assert_p1("""rn=1,cm-,qp=3,cm=2,qp-,pc=4,ot=9,ab=5,pc-,pc=6,ot=7\n""", 1320)
 aoc.submit_p1()
 
-aoc.test_p2("""rn=1,cm-,qp=3,cm=2,qp-,pc=4,ot=9,ab=5,pc-,pc=6,ot=7\n""", 145)
+aoc.assert_p2("""rn=1,cm-,qp=3,cm=2,qp-,pc=4,ot=9,ab=5,pc-,pc=6,ot=7\n""", 145)
 aoc.submit_p2()
