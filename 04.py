@@ -18,7 +18,7 @@ def part1(inp: list[str]):
 
 def part2(inp: list[str]):
     cards = {}
-    for i, line in enumerate(inp: list[str]):
+    for i, line in enumerate(inp):
         winning, mine = line.split(": ")[1].split(" | ")
         winning = set(map(int, winning.split()))
         mine = set(map(int, mine.split()))

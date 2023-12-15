@@ -2,13 +2,11 @@ from textwrap import dedent
 
 from adventofcode import AoC
 
-aoc = AoC()
-
 
 def part1(inp: list[str]):
     grid = {}
     rocks = []
-    for j, line in enumerate(inp: list[str]):
+    for j, line in enumerate(inp):
         for i, c in enumerate(line):
             grid[(i, j)] = c
             if c == "O":
@@ -50,7 +48,7 @@ def print_grid(grid, inp):
 def part2(inp: list[str]):
     grid = {}
     rocks = []
-    for j, line in enumerate(inp: list[str]):
+    for j, line in enumerate(inp):
         for i, c in enumerate(line):
             grid[(i, j)] = c
             if c == "O":
@@ -58,7 +56,6 @@ def part2(inp: list[str]):
     seen_cycles = {get_hashable(grid)}
     cycles = [get_score(grid, inp)]
     cycle_hashes = []
-    print_grid(grid, inp)
     while True:
         # NORTH
         rocks = sorted(rocks, key=lambda r: r[1])
@@ -113,7 +110,6 @@ def part2(inp: list[str]):
             idx_of_repeat = cycle_hashes.index(hashable)
             reptead_cycles = cycles[idx_of_repeat:]
             res_index = (1000000000 - idx_of_repeat) % len(reptead_cycles)
-            print(reptead_cycles, res_index, reptead_cycles[res_index])
             return reptead_cycles[res_index]
 
         seen_cycles.add(hashable)
@@ -121,10 +117,9 @@ def part2(inp: list[str]):
         cycle_hashes.append(hashable)
 
 
-assert (
-    part1(
-        dedent(
-            """O....#....
+aoc = AoC(part_1=part1, part_2=part2)
+aoc.assert_p1(
+    """O....#....
 O.OO#....#
 .....##...
 OO.#O....O
@@ -133,16 +128,12 @@ O.#..O.#.#
 ..O..#O..O
 .......O..
 #....###..
-#OO..#...."""
-        ).splitlines()
-    )
-    == 136
+#OO..#....""",
+    136,
 )
-aoc.submit_p1(part1(aoc.get_input()))
-assert (
-    part2(
-        dedent(
-            """O....#....
+aoc.submit_p1()
+aoc.assert_p2(
+    """O....#....
 O.OO#....#
 .....##...
 OO.#O....O
@@ -151,9 +142,7 @@ O.#..O.#.#
 ..O..#O..O
 .......O..
 #....###..
-#OO..#...."""
-        ).splitlines()
-    )
-    == 64
+#OO..#....""",
+    63,
 )
-aoc.submit_p2(part2(aoc.get_input()))
+aoc.submit_p2()

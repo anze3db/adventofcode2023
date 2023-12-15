@@ -66,7 +66,7 @@ def part1(inp: list[str]):
     grid = {}
     start = None
     weights = {}
-    for j, line in enumerate(inp: list[str]):
+    for j, line in enumerate(inp):
         for i, c in enumerate(line):
             grid[i, j] = c
             if c == "S":
@@ -88,7 +88,7 @@ def part2(inp: list[str]):
     grid = {}
     start = None
     weights = {}
-    for j, line in enumerate(inp: list[str]):
+    for j, line in enumerate(inp):
         for i, c in enumerate(line):
             grid[i, j] = c
             if c == "S":

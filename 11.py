@@ -7,7 +7,7 @@ aoc = AoC()
 
 def part1(inp: list[str]):
     empty_lines = set()
-    for i, line in enumerate(inp: list[str]):
+    for i, line in enumerate(inp):
         if set(line) == {"."}:
             empty_lines.add(i)
     empty_columns = set()
@@ -16,7 +16,7 @@ def part1(inp: list[str]):
             empty_columns.add(i)
     expanded_inp = []
 
-    for j, line in enumerate(inp: list[str]):
+    for j, line in enumerate(inp):
         if j in empty_lines:
             expanded_inp.append("." * len(expanded_inp[0]))
         curr = ""
@@ -45,7 +45,7 @@ def part2(inp, expansion=1000000):
     expansion -= 1  # offset for the row that already exists
 
     empty_lines = set()
-    for i, line in enumerate(inp: list[str]):
+    for i, line in enumerate(inp):
         if set(line) == {"."}:
             empty_lines.add(i)
     empty_columns = set()
@@ -56,7 +56,7 @@ def part2(inp, expansion=1000000):
     galaxies = set()
 
     cnt_rows = 0
-    for j, line in enumerate(inp: list[str]):
+    for j, line in enumerate(inp):
         cnt_cols = 0
         if j in empty_lines:
             cnt_rows += 1

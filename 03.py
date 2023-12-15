@@ -12,7 +12,7 @@ def part1(inp: list[str]):
 
     processed = set()
     symbols = set()
-    for y, line in enumerate(inp: list[str]):
+    for y, line in enumerate(inp):
         for x, c in enumerate(line):
             grid[(x, y)] = c
             if not c.isnumeric() and c != ".":
@@ -50,7 +50,7 @@ def part2(inp: list[str]):
     symbols = set()
 
     processed = set()
-    for y, line in enumerate(inp: list[str]):
+    for y, line in enumerate(inp):
         for x, c in enumerate(line):
             grid[(x, y)] = c
             if not c.isnumeric() and c != ".":
