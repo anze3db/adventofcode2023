@@ -5,10 +5,10 @@ from adventofcode import AoC
 aoc = AoC()
 
 
-def part1(inp):
+def part1(inp: list[str]):
     grid = {}
     rocks = []
-    for j, line in enumerate(inp):
+    for j, line in enumerate(inp: list[str]):
         for i, c in enumerate(line):
             grid[(i, j)] = c
             if c == "O":
@@ -47,10 +47,10 @@ def print_grid(grid, inp):
     print()
 
 
-def part2(inp):
+def part2(inp: list[str]):
     grid = {}
     rocks = []
-    for j, line in enumerate(inp):
+    for j, line in enumerate(inp: list[str]):
         for i, c in enumerate(line):
             grid[(i, j)] = c
             if c == "O":

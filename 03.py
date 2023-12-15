@@ -5,14 +5,14 @@ from adventofcode import AoC
 aoc = AoC()
 
 
-def part1(inp):
+def part1(inp: list[str]):
     grid = {}
     directions = {(0, 1), (1, 0), (0, -1), (-1, 0), (1, 1), (-1, -1), (-1, 1), (1, -1)}
     res = 0
 
     processed = set()
     symbols = set()
-    for y, line in enumerate(inp):
+    for y, line in enumerate(inp: list[str]):
         for x, c in enumerate(line):
             grid[(x, y)] = c
             if not c.isnumeric() and c != ".":
@@ -43,14 +43,14 @@ def part1(inp):
     return res
 
 
-def part2(inp):
+def part2(inp: list[str]):
     grid = {}
     directions = {(0, 1), (1, 0), (0, -1), (-1, 0), (1, 1), (-1, -1), (-1, 1), (1, -1)}
     res = 0
     symbols = set()
 
     processed = set()
-    for y, line in enumerate(inp):
+    for y, line in enumerate(inp: list[str]):
         for x, c in enumerate(line):
             grid[(x, y)] = c
             if not c.isnumeric() and c != ".":

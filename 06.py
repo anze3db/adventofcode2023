@@ -5,7 +5,7 @@ from adventofcode import AoC
 aoc = AoC()
 
 
-def part1(inp):
+def part1(inp: list[str]):
     times = list(map(int, inp[0].split(": ")[1].split()))
     distances = list(map(int, inp[1].split(": ")[1].split()))
     num = 1
@@ -18,7 +18,7 @@ def part1(inp):
     return num
 
 
-def part2(inp):
+def part2(inp: list[str]):
     time = int(inp[0].split(": ")[1].replace(" ", ""))
     distance = int(inp[1].split(": ")[1].replace(" ", ""))
 

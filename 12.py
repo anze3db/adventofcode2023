@@ -7,7 +7,7 @@ from adventofcode import AoC
 aoc = AoC()
 
 
-def part1(inp):
+def part1(inp: list[str]):
     res = 0
     for line in inp:
         springs, counts = line.split(" ")
@@ -60,7 +60,7 @@ def dp(springs, counts, done_cnt=0):
     return sol_cnt
 
 
-def part2(inp):
+def part2(inp: list[str]):
     res = 0
     for line in inp:
         springs, counts = line.split(" ")

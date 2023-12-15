@@ -6,7 +6,7 @@ from adventofcode import AoC
 aoc = AoC()
 
 
-def part1(inp):
+def part1(inp: list[str]):
     res = 0
     for line in inp:
         digits = re.sub("[^0-9]", "", line)
@@ -62,7 +62,7 @@ def last_digit(line: str) -> str:
     return last_digit(line[:-1])
 
 
-def part2(inp):
+def part2(inp: list[str]):
     res = 0
     for line in inp:
         res += int(first_digit(line) + last_digit(line))

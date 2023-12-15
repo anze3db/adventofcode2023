@@ -34,7 +34,7 @@ def parse_maps2(maps):
         yield Map2(m.split("\n"))
 
 
-def part1(inp):
+def part1(inp: list[str]):
     seeds = map(int, inp[0].split(": ")[1].split(" "))
     maps_to_parse = "\n".join(inp[2:])
     maps = list(parse_maps(maps_to_parse))
@@ -113,7 +113,7 @@ class Map2(Map):
         return new_ranges
 
 
-def part2(inp):
+def part2(inp: list[str]):
     seed_ranges = map(int, inp[0].split(": ")[1].split(" "))
 
     maps_to_parse = "\n".join(inp[2:])

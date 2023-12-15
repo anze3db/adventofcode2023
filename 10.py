@@ -62,11 +62,11 @@ def next_step(grid, x, y):
     return None
 
 
-def part1(inp):
+def part1(inp: list[str]):
     grid = {}
     start = None
     weights = {}
-    for j, line in enumerate(inp):
+    for j, line in enumerate(inp: list[str]):
         for i, c in enumerate(line):
             grid[i, j] = c
             if c == "S":
@@ -84,11 +84,11 @@ def part1(inp):
     return max(weights.values())
 
 
-def part2(inp):
+def part2(inp: list[str]):
     grid = {}
     start = None
     weights = {}
-    for j, line in enumerate(inp):
+    for j, line in enumerate(inp: list[str]):
         for i, c in enumerate(line):
             grid[i, j] = c
             if c == "S":

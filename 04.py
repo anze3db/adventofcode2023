@@ -5,7 +5,7 @@ from adventofcode import AoC
 aoc = AoC()
 
 
-def part1(inp):
+def part1(inp: list[str]):
     res = 0
     for line in inp:
         winning, mine = line.split(": ")[1].split(" | ")
@@ -16,9 +16,9 @@ def part1(inp):
     return res
 
 
-def part2(inp):
+def part2(inp: list[str]):
     cards = {}
-    for i, line in enumerate(inp):
+    for i, line in enumerate(inp: list[str]):
         winning, mine = line.split(": ")[1].split(" | ")
         winning = set(map(int, winning.split()))
         mine = set(map(int, mine.split()))

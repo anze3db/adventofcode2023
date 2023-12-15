@@ -6,7 +6,7 @@ from adventofcode import AoC
 aoc = AoC()
 
 
-def parse(inp):
+def parse(inp: list[str]):
     directions = "\n".join(inp).split("\n\n")[0]
     mp = "\n".join(inp).split("\n\n")[1]
     mapping = {}
@@ -19,7 +19,7 @@ def parse(inp):
     return directions, mapping
 
 
-def part1(inp):
+def part1(inp: list[str]):
     directions, mapping = parse(inp)
 
     current = "AAA"
@@ -31,7 +31,7 @@ def part1(inp):
     return res
 
 
-def part2(inp):
+def part2(inp: list[str]):
     directions, mapping = parse(inp)
     starts = list([m for m in mapping if m.endswith("A")])
     finishes = []

@@ -16,7 +16,7 @@ def find_equals(sets: list[set[tuple[int, str]]]):
             return i + 1
 
 
-def part1(inp):
+def part1(inp: list[str]):
     patterns = "\n".join(inp).split("\n\n")
     res = 0
     for pattern in patterns:
@@ -60,7 +60,7 @@ def find_equals_smudge(sets: list[set[tuple[int, str]]]):
             return i + 1
 
 
-def part2(inp):
+def part2(inp: list[str]):
     patterns = "\n".join(inp).split("\n\n")
     res = 0
     for pattern in patterns:

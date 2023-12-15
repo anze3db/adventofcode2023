@@ -104,7 +104,7 @@ class Hand2:
         return mx
 
 
-def part1(inp):
+def part1(inp: list[str]):
     hands = []
     for line in inp:
         card, bid = line.split(" ")
@@ -117,7 +117,7 @@ def part1(inp):
     return res
 
 
-def part2(inp):
+def part2(inp: list[str]):
     hands = []
     for line in inp:
         card, bid = line.split(" ")
