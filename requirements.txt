@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-adventofcode==2023.0b0
+adventofcode==23.0b1
     # via -r requirements.in
 beautifulsoup4==4.12.2
     # via adventofcode
@@ -34,11 +34,11 @@ rich==13.7.0
     # via
     #   -r requirements.in
     #   adventofcode
-ruff==0.1.6
+ruff==0.1.8
     # via -r requirements.in
 soupsieve==2.5
     # via beautifulsoup4
-typing-extensions==4.8.0
+typing-extensions==4.9.0
     # via mypy
 urllib3==2.1.0
     # via requests
