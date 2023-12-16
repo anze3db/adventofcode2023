@@ -1,8 +1,4 @@
-from textwrap import dedent
-
 from adventofcode import AoC
-
-aoc = AoC()
 
 
 def part1(inp: list[str]):
@@ -108,29 +104,9 @@ def part2(inp: list[str]):
     return res
 
 
-assert (
-    part1(
-        dedent(
-            """467..114..
-...*......
-..35..633.
-......#...
-617*......
-.....+.58.
-..592.....
-......755.
-...$.*....
-.664.598.."""
-        ).splitlines()
-    )
-    == 4361
-)
-aoc.submit_p1(part1(aoc.get_input()))
+aoc = AoC(part_1=part1, part_2=part2)
 
-assert (
-    part2(
-        dedent(
-            """467..114..
+inp = """467..114..
 ...*......
 ..35..633.
 ......#...
@@ -140,8 +116,14 @@ assert (
 ......755.
 ...$.*....
 .664.598.."""
-        ).splitlines()
-    )
-    == 467835
+aoc.assert_p1(
+    inp,
+    4361,
 )
-aoc.submit_p2(part2(aoc.get_input()))
+aoc.submit_p1()
+
+aoc.assert_p2(
+    inp,
+    467835,
+)
+aoc.submit_p2()
