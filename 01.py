@@ -1,9 +1,6 @@
 import re
-from textwrap import dedent
 
 from adventofcode import AoC
-
-aoc = AoC()
 
 
 def part1(inp: list[str]):
@@ -69,30 +66,25 @@ def part2(inp: list[str]):
     return res
 
 
-assert (
-    part1(
-        dedent(
-            """1abc2
-               pqr3stu8vwx
-               a1b2c3d4e5f
-               treb7uchet"""
-        ).splitlines()
-    )
-    == 142
+aoc = AoC(part_1=part1, part_2=part2)
+
+aoc.assert_p1(
+    """1abc2
+pqr3stu8vwx
+a1b2c3d4e5f
+treb7uchet""",
+    142,
 )
-aoc.submit_p1(part1(aoc.get_input()))
-assert (
-    part2(
-        dedent(
-            """two1nine
-            eightwothree
-            abcone2threexyz 
-            xtwone3four
-            4nineeightseven2
-            zoneight234
-            7pqrstsixteen"""
-        ).splitlines()
-    )
-    == 281
+aoc.submit_p1()
+
+aoc.assert_p2(
+    """two1nine
+eightwothree
+abcone2threexyz 
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen""",
+    281,
 )
-aoc.submit_p2(part2(aoc.get_input()))
+aoc.submit_p2()

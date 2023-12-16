@@ -1,9 +1,6 @@
 import math
-from textwrap import dedent
 
 from adventofcode import AoC
-
-aoc = AoC()
 
 
 def part1(input):
@@ -49,30 +46,21 @@ def part2(input):
     return res
 
 
-assert (
-    part1(
-        dedent(
-            """Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
-Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
-Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
-Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
-Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"""
-        ).splitlines()
-    )
-    == 8
-)
-aoc.submit_p1(part1(aoc.get_input()))
+aoc = AoC(part_1=part1, part_2=part2)
 
-assert (
-    part2(
-        dedent(
-            """Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+inp = """Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
 Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"""
-        ).splitlines()
-    )
-    == 2286
+aoc.assert_p1(
+    inp,
+    8,
 )
-aoc.submit_p2(part2(aoc.get_input()))
+aoc.submit_p1()
+
+aoc.assert_p2(
+    inp,
+    2286,
+)
+aoc.submit_p2()
