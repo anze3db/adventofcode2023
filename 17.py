@@ -152,8 +152,8 @@ inp = """2413432311323
 1224686865563
 2546548887735
 4322674655533"""
-# aoc.assert_p1(inp, 102)
-# aoc.submit_p1()
+aoc.assert_p1(inp, 102)
+aoc.submit_p1()
 
 aoc.assert_p2(inp, 94)
 aoc.assert_p2(
