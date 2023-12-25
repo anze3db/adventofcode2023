@@ -1,5 +1,6 @@
 adventofcode
 sympy
+networkx
 
 mypy
 rich
